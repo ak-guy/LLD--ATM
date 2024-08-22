@@ -1,5 +1,5 @@
 package JavaCode.ATMState;
 
-public class ATMState {
+public abstract class ATMState {
     
 }

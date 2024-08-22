@@ -1,5 +1,5 @@
 package JavaCode.ATMState;
 
-public class IdleState {
+public class IdleState extends ATMState{
     
 }

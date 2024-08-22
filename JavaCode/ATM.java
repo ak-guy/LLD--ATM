@@ -21,6 +21,7 @@ public class ATM {
     public ATM getATMInstance() {
         ATM atmObj = ATMSinglenton.atmObject;
         atmObj.setATMState(new IdleState());
+        return atmObj;
     }
 
     public void setATMState(ATMState currentATMState) {
