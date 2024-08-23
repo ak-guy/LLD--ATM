@@ -10,6 +10,8 @@ public abstract class AmountWithdrawalProcessor {
     }
 
     public void withdrawAmount(ATM atm, int amount) {
-        
+        if (nextAmountWithdrawalProcessor != null) {
+            nextAmountWithdrawalProcessor.withdrawAmount(atm, amount);
+        }
     }
 }
