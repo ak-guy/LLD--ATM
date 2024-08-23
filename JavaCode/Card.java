@@ -26,7 +26,7 @@ public class Card {
         return false;
     }
 
-    public int getBankBalance(UserBankAccount userBankAccount) {
+    public int getBankBalance() {
         return userBankAccount.getBalance();
     }
 

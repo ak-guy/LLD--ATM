@@ -82,7 +82,7 @@ public class ATM {
     }
 
     public void printATMStatus() {
-        System.out.println("Total Balance: " + currentATMBalance);
+        System.out.println("Total ATM Balance: " + currentATMBalance);
         System.out.println("2kNotes: " + noOfTwoThousandNotes);
         System.out.println("500Notes: " + noOfFiveHundredNotes);
         System.out.println("200Notes: " + noOfTwoHundredNotes);
