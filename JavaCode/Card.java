@@ -10,6 +10,8 @@ public class Card {
     static int PIN_NUMBER = 123456;
     private UserBankAccount userBankAccount;
 
+    public Card() {}
+    
     public Card(String cardNumber, int cvv, Date expiry, String cardHolderName, UserBankAccount userBankAccount) {
         this.cardNumber = cardNumber;
         this.cvv = cvv;

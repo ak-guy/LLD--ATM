@@ -18,7 +18,7 @@ public class ATM {
     }
 
     // public method to get instance of ATM
-    public ATM getATMInstance() {
+    public static ATM getATMInstance() {
         ATM atmObj = ATMSinglenton.atmObject;
         atmObj.setATMState(new IdleState());
         return atmObj;
@@ -33,12 +33,13 @@ public class ATM {
         return currentATMBalance;
     }
 
-    public void setCurrentATMBalance(int currentATMBalance, int noOfTwoThousandNotes, int noOfFiveHundredNotes, int noOfTwoHundredNotes, int noOfOneHundredNotes) {
-        if (currentATMBalance != ((noOfFiveHundredNotes * 500) + (noOfOneHundredNotes * 100) + (noOfTwoHundredNotes * 200) + (noOfTwoThousandNotes * 2000))) {
-            System.out.println("Input Principal Amount does not match the total amount from notes");
+    public void setCurrentATMBalance(int addATMBalance, int noOfTwoThousandNotes, int noOfFiveHundredNotes, int noOfTwoHundredNotes, int noOfOneHundredNotes) {
+        int totalCalculatedAmount = ((noOfFiveHundredNotes * 500) + (noOfOneHundredNotes * 100) + (noOfTwoHundredNotes * 200) + (noOfTwoThousandNotes * 2000));
+        if (addATMBalance != totalCalculatedAmount) {
+            System.out.println("Input Principal Amount does not match the total amount from notes" + addATMBalance + " -> " + totalCalculatedAmount );
             return;
         }
-        this.currentATMBalance = currentATMBalance;
+        this.currentATMBalance = addATMBalance;
         this.noOfOneHundredNotes = noOfOneHundredNotes;
         this.noOfFiveHundredNotes = noOfFiveHundredNotes;
         this.noOfTwoHundredNotes = noOfTwoHundredNotes;
